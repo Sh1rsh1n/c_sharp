@@ -56,7 +56,6 @@
 // else
 // {
 //     Console.WriteLine("Число Кратно");
-
 // }
 
 
