@@ -20,4 +20,4 @@ void sumDigits(int number)
     Console.Write($"{sum}");
 }
 
-sumDigits(12345);
+sumDigits(123451516);
