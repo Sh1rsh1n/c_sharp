@@ -28,10 +28,10 @@ int[] arrayMaker(int capacity)
 */
 int minMaxDiff(int[] array)
 {
-    int min = array[0]; //минимальное число задаем сразу из 0 элемента
-    int max = 0;
+    int min = array[0]; //минимальное число задаем из 0 элемента массива
+    int max = array[1]; //максимальное число задаем из 1 элемента массива
 
-    for (int i = 1; i < array.Length; i++) //обходим массив начиная со 2ого элемента
+    for (int i = 0; i < array.Length; i++)
     {
         if(array[i] < min) //если число в указанном индексе меньше минимального, то присваиваем его значение переменной min
         {
