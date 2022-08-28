@@ -1,10 +1,10 @@
-/*
+package seminar_4;/*
 Задача 29: Напишите программу, которая задаёт массив 
 из 8 элементов и выводит их на экран.
 */
 
 
-public class Task3{
+public class FillArrays {
 	
 	static void fillArray(int capacity, int max){
 		int[] array = new int[capacity];
