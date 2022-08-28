@@ -1,10 +1,10 @@
-/*
+package seminar_4;/*
 Задача 27: Напишите программу, которая принимает на 
 вход число и выдаёт сумму цифр в числе.
 */
 
 
-public class Task2{
+public class SumAllDigits {
 	
 	static int sumDigits(int num){
 		
