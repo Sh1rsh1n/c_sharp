@@ -3,16 +3,16 @@
 которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.
 */
 
-//создаем двумерный массив
 int[,] FillArray(int row, int column, int min, int max)
 {
     int[,] array = new int[row, column];
+    Console.WriteLine("Исходный массив");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
             array[i, j] = new Random().Next(min, max + 1);
-            Console.Write($"{array[i, j]}\t");
+            Console.Write("{0, 4}", array[i, j]);
         }
         Console.WriteLine();
     }
@@ -38,25 +38,27 @@ void FindMinValue(int[,] array)
             }
         }
     }
-    Console.WriteLine($"{minIndexRow}, {minIndexColumn}");
 
+    Console.WriteLine();
+    Console.WriteLine($"индексы минимального элемента: строка = {minIndexRow}, столбец = {minIndexColumn}");
+    Console.WriteLine();
 
-
-    int[,] tempArray = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
+    int[,] tempArray = new int[array.GetLength(0), array.GetLength(1)];
+    Console.WriteLine("Массив после удаления строк и столбцов наименьшего элемента");
     for (int i = 0; i < tempArray.GetLength(0); i++)
     {
+        if (i == minIndexRow)
+        {
+            continue;
+        }
         for (int j = 0; j < tempArray.GetLength(1); j++)
         {
-            if (i == minIndexRow -1 || j == minIndexColumn - 1)
+            if (j == minIndexColumn)
             {
                 continue;
             }
-            else
-            {
                 tempArray[i, j] = array[i, j];
-                Console.Write($"{tempArray[i, j]} ");
-
-            }
+                Console.Write("{0,4}", tempArray[i, j]);
         }
         Console.WriteLine();
     }
