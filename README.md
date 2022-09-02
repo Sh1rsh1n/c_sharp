@@ -1,1 +1,1 @@
-**My Perository, for learning in GeekBrains**
+**My Repository, for learning in GeekBrains**
